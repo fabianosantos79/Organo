@@ -6,16 +6,6 @@ import { useState } from 'react';
 
 export const Formulario = (props) => {
 
-    const Times = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
-
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
@@ -60,7 +50,7 @@ export const Formulario = (props) => {
 
                 <ListaSuspensa
                     label="Times"
-                    itens={Times}
+                    itens={props.times}
                     valor={time}
                     aoAlterado={valor => setTime(valor)}
                 />
