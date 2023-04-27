@@ -1,0 +1,16 @@
+.rodapePage {
+ height: 150px;
+ background-color: #627bf7;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+}
+
+.rodapePage img {
+ margin-right: 20px;
+}
+
+.rodapePage h2 {
+ color: #fff;
+ font-size: 25px;
+}
