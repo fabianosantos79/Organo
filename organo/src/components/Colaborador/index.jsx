@@ -1,8 +1,10 @@
 import './style.css';
+import { AiFillCloseSquare } from 'react-icons/ai'
 
-export const Colaborador = ({ nome, cargo, imagem, corFundo }) => {
+export const Colaborador = ({ nome, cargo, imagem, corFundo, aoDeletar }) => {
     return (
         <div className='colaborador'>
+            <AiFillCloseSquare size={35} className='deletar' onClick={aoDeletar} />
             <div className='cabecalho' style={{ backgroundColor: corFundo }}>
                 <img src={imagem} alt={nome} />
             </div>
