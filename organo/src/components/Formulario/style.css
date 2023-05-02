@@ -1,7 +1,9 @@
 .formulario {
  display: flex;
  justify-content: center;
- margin: 40px 0px;
+ gap: 30px;
+ margin: 80px 50px;
+ flex-wrap: wrap;
 }
 
 .formulario form {

@@ -1,0 +1,12 @@
+.input-color {
+ width: 100%;
+}
+
+.input-color label {
+ font-size: 25px;
+ display: block;
+}
+
+.input-color input {
+ width: 97%;
+}

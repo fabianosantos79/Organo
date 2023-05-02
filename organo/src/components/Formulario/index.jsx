@@ -3,6 +3,7 @@ import { CampoTexto } from '../CampoTexto/index';
 import { ListaSuspensa } from '../ListaSuspensa';
 import { Botao } from '../Botao';
 import { useState } from 'react';
+import { InputColor } from '../InputColor'
 
 export const Formulario = (props) => {
 
@@ -10,6 +11,8 @@ export const Formulario = (props) => {
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
     const [time, setTime] = useState('')
+    const [nomeTime, setNomeTime] = useState('')
+    const [corTime, setCorTime] = useState('')
 
     const aoSalvar = (e) => {
         e.preventDefault()
@@ -60,7 +63,33 @@ export const Formulario = (props) => {
                 />
 
                 <Botao>
-                    Criar cards
+                    Criar Card
+                </Botao>
+            </form>
+            <form onSubmit={(evento) => {
+                evento.preventDefault()
+                props.cadastraTime({ nome: nomeTime, cor: corTime })
+            }
+            }
+            >
+                <h2>Preencha os dados para um Novo Time</h2>
+                <CampoTexto
+                    obrigatorio
+                    label="Nome"
+                    placeholder="Digite o nome do time"
+                    valor={nomeTime}
+                    aoAlterado={valor => setNomeTime(valor)}
+                />
+
+                <InputColor
+                    obrigatorio
+                    label="Cor"
+                    valor={corTime}
+                    aoAlterado={valor => setCorTime(valor)}
+                />
+
+                <Botao>
+                    Criar um novo Time
                 </Botao>
             </form>
         </section>
